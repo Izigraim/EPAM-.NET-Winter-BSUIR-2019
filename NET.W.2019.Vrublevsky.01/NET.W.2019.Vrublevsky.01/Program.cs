@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace NET.W._2019.Vrublevsky._01
 {
-    class Program
+    public class Program
     {
-        static void QuickSort(int[] array, int first, int last)
+        /// <summary>
+        /// Quick Sort method.
+        /// </summary>
+        /// <param name="array">Unsorted array.</param>
+        /// <param name="first">Sort start index.</param>
+        /// <param name="last">Sort end index.</param>
+        /// <returns>Sorted array.</returns>
+        public static int[] QuickSort(int[] array, int first, int last)
         {
             if(first < last)
             {
@@ -29,9 +36,17 @@ namespace NET.W._2019.Vrublevsky._01
                 if (first < right) QuickSort(array, first, right);
                 if (left < last) QuickSort(array, left, last);
             }
+            return array;
         }
 
-        static void MergeSort(int[] array, int left, int right)
+        /// <summary>
+        /// Merge sort recurcive.
+        /// </summary>
+        /// <param name="array"> Unsorted array.</param>
+        /// <param name="left">Sort start index.</param>
+        /// <param name="right">Sort end index.</param>
+        /// <returns>Sorted array.</returns>
+        public static int[] MergeSort(int[] array, int left, int right)
         {
             int mid;
 
@@ -42,9 +57,11 @@ namespace NET.W._2019.Vrublevsky._01
                 MergeSort(array, (mid + 1), right);
                 Merge(array, left, (mid + 1), right);
             }
+
+            return array;
         }
 
-        static void Merge(int[] array, int left, int mid, int right)
+        public static void Merge(int[] array, int left, int mid, int right)
         {
             int[] temp = new int[array.Length];
             int leftEnd = mid - 1, length = right - left + 1, pos = left;
@@ -75,7 +92,7 @@ namespace NET.W._2019.Vrublevsky._01
             }
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Random rand = new Random();
 
