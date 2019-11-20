@@ -2,9 +2,16 @@
 
 namespace Task02
 {
+    /// <summary>
+    /// Converter from double to binary IEEE.
+    /// </summary>
     public static class IEEE
     {
-
+        /// <summary>
+        /// Converts from double to string of it's binary representation.
+        /// </summary>
+        /// <param name="number">Double number.</param>
+        /// <returns>Binary representation.</returns>
         public static string DoubleToBin(this double number)
         {
             string bin = null;
@@ -39,6 +46,9 @@ namespace Task02
             return rev;
         }
 
+        /// <summary>
+        /// Double and Long number at one field offset.
+        /// </summary>
         [StructLayout(LayoutKind.Explicit)]
         private struct DoubleToLong
         {
@@ -47,12 +57,19 @@ namespace Task02
             [FieldOffset(0)]
             private readonly double double64;
 
+            /// <summary>
+            /// Initializes a new instance of the <see cref="DoubleToLong"/> struct.
+            /// </summary>
+            /// <param name="number">Double number.</param>
             public DoubleToLong(double number)
             {
                 this.long64 = 0;
                 this.double64 = number;
             }
 
+            /// <summary>
+            /// Get long64.
+            /// </summary>
             public long Long64
             {
                 get
