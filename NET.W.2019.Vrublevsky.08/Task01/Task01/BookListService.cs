@@ -1,0 +1,169 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+
+namespace Task01
+{
+    internal class BookListService
+    {
+        private List<Book> books = BookListStorage.ReadFromFile();
+
+        public void AddBook(Book b)
+        {
+            try
+            {
+                if (this.books.Find(c => (c.Author == b.Author) && (c.Name == b.Name)) != null)
+                {
+                    throw new BookException("This book is already exist.");
+                }
+                else
+                {
+                    this.books.Add(b);
+                    BookListStorage.AddToFile(b);
+                    Console.WriteLine("The book is successfully added.");
+                    Console.WriteLine();
+                }
+            }
+            catch (BookException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public void RemoveBook(Book b)
+        {
+            this.books.Remove(b);
+            BookListStorage.RemoveFromFile(this.books);
+            Console.WriteLine("The book is successfully remove.");
+            Console.WriteLine();
+        }
+
+        public List<Book> GetBooks()
+        {
+            return this.books;
+        }
+
+        public Book FindByTag(string tag, string find)
+        {
+            Book b = null;
+            tag = tag.ToLower(CultureInfo.CreateSpecificCulture("en-US"));
+            List<string> tags = new List<string> { "isbn", "author", "name", "publishing", "year", "pages", "price" };
+            try
+            {
+                if (!tags.Contains(tag))
+                {
+                    throw new BookException("Incorrect tag.");
+                }
+            }
+            catch (BookException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+            switch (tag)
+            {
+                case "isbn":
+                    b = this.books.Find(c => c.ISBN == find);
+                    break;
+                case "author":
+                    b = this.books.Find(c => c.Author == find);
+                    break;
+                case "name":
+                    b = this.books.Find(c => c.Name == find);
+                    break;
+                case "publishing":
+                    b = this.books.Find(c => c.Publishing == find);
+                    break;
+                case "year":
+                    b = this.books.Find(c => c.YearOfPublishing == Convert.ToInt32(find, CultureInfo.CreateSpecificCulture("en-US")));
+                    break;
+                case "pages":
+                    b = this.books.Find(c => c.CountOfPages == Convert.ToInt32(find, CultureInfo.CreateSpecificCulture("en-US")));
+                    break;
+                case "price":
+                    b = this.books.Find(c => c.Price == Convert.ToDouble(find, CultureInfo.CreateSpecificCulture("en-US")));
+                    break;
+            }
+
+            return b;
+        }
+
+        public void SortByTag(string tag)
+        {
+            tag = tag.ToLower(CultureInfo.CreateSpecificCulture("en-US"));
+            List<string> tags = new List<string> { "isbn", "author", "name", "publishing", "year", "pages", "price" };
+            try
+            {
+                if (!tags.Contains(tag))
+                {
+                    throw new BookException("Incorrect tag.");
+                }
+            }
+            catch (BookException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return;
+            }
+
+            var a = this.books.ToArray();
+            switch (tag)
+            {
+                case "isbn":
+                    {
+                        Array.Sort(a, Book.SortIsbn());
+                        this.books = a.ToList();
+                    }
+
+                    break;
+                case "author":
+                    {
+                        Array.Sort(a, Book.SortAuthor());
+                        this.books = a.ToList();
+                    }
+
+                    break;
+                case "name":
+                    {
+                        Array.Sort(a, Book.SortName());
+                        this.books = a.ToList();
+                    }
+
+                    break;
+                case "publishing":
+                    {
+                        Array.Sort(a, Book.SortPublishing());
+                        this.books = a.ToList();
+                    }
+
+                    break;
+                case "year":
+                    {
+                        Array.Sort(a, Book.SortYear());
+                        this.books = a.ToList();
+                    }
+
+                    break;
+                case "pages":
+                    {
+                        Array.Sort(a, Book.SortPages());
+                        this.books = a.ToList();
+                    }
+
+                    break;
+                case "price":
+                    {
+                        Array.Sort(a, Book.SortPrice());
+                        this.books = a.ToList();
+                    }
+
+                    break;
+            }
+
+            BookListStorage.SaveSortToFile(this.books);
+        }
+    }
+}
