@@ -7,10 +7,17 @@ using System.Text;
 
 namespace Task01
 {
+    /// <summary>
+    /// Service to work with a books.
+    /// </summary>
     internal class BookListService
     {
         private List<Book> books = BookListStorage.ReadFromFile();
 
+        /// <summary>
+        /// Add new <see cref="Book"/> to list..
+        /// </summary>
+        /// <param name="b"><see cref="Book"/> instance.</param>
         public void AddBook(Book b)
         {
             try
@@ -33,6 +40,10 @@ namespace Task01
             }
         }
 
+        /// <summary>
+        /// Remove <see cref="Book"/> from list.
+        /// </summary>
+        /// <param name="b"><see cref="Book"/> instance.</param>
         public void RemoveBook(Book b)
         {
             this.books.Remove(b);
@@ -41,11 +52,21 @@ namespace Task01
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// Return list of all books.
+        /// </summary>
+        /// <returns>List of all books.</returns>
         public List<Book> GetBooks()
         {
             return this.books;
         }
 
+        /// <summary>
+        /// Find <see cref="Book"/> by tag.
+        /// </summary>
+        /// <param name="tag">Tag.</param>
+        /// <param name="find">Find query.</param>
+        /// <returns>Instance of book.</returns>
         public Book FindByTag(string tag, string find)
         {
             Book b = null;
@@ -92,6 +113,10 @@ namespace Task01
             return b;
         }
 
+        /// <summary>
+        /// Sort list of books by tag.
+        /// </summary>
+        /// <param name="tag">Tag.</param>
         public void SortByTag(string tag)
         {
             tag = tag.ToLower(CultureInfo.CreateSpecificCulture("en-US"));

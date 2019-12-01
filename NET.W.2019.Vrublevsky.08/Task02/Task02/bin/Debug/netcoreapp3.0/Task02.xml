@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task02</name>
+    </assembly>
+    <members>
+        <member name="T:Task02.Logic.BankAccountService">
+            <summary>
+            Service to work with bank accounts.
+            </summary>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02.Logic.BankAccountService"/> class.
+            </summary>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.OpenAccount(Task02.Models.User,Task02.Models.AccountType,System.String@)">
+            <summary>
+            Opens the account.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="accountType">The type of account.</param>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.CloseAccount(System.String)">
+            <summary>
+            Closes the account.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.Deposite(System.String,System.Decimal)">
+            <summary>
+            Deposities the value.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.Withdraw(System.String,System.Decimal)">
+            <summary>
+            Withdraws the value.
+            </summary>
+            <param name="id">The Identifier.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.Info(System.String)">
+            <summary>
+            Gets info about account.
+            </summary>
+            <param name="id">The indentifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.GenerateAccountId(System.String)">
+            <summary>
+            Generates account identifier.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>A <see cref="T:System.String"/> that used as identifier.</returns>
+        </member>
+        <member name="T:Task02.Models.AccountStatus">
+            <summary>
+            Sttatus of account.
+            </summary>
+        </member>
+        <member name="T:Task02.Models.AccountType">
+            <summary>
+            Type of account.
+            </summary>
+        </member>
+        <member name="T:Task02.Models.BankAccount">
+            <summary>
+            Instance of bank account.
+            </summary>
+        </member>
+        <member name="P:Task02.Models.BankAccount.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Task02.Models.BankAccount.Status">
+            <summary>
+            Gets or sets ot sets the status.
+            </summary>
+            <value>
+            Ot sets the status.
+            </value>
+        </member>
+        <member name="M:Task02.Models.BankAccount.Deposite(System.Decimal)">
+            <summary>
+            Deposite balance with value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Task02.Models.BankAccount.Withdraw(System.Decimal)">
+            <summary>
+            Witdraw balance with value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Task02.Models.BankAccount.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="M:Task02.Models.BankAccount.CountBonusPoints(System.Decimal)">
+            <summary>
+            Counts the bonus.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>Count of bonus.</returns>
+        </member>
+        <member name="M:Task02.Models.BankAccount.ValidBalance(System.Decimal)">
+            <summary>
+            Determines whether a balance transaction is possible or not.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="T:Task02.Models.BaseAccount">
+            <summary>
+            Instance of base account.
+            </summary>
+        </member>
+        <member name="M:Task02.Models.BaseAccount.#ctor(System.String,Task02.Models.User)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02.Models.BaseAccount"/> class.
+            </summary>
+            <param name="id">THe identifier.</param>
+            <param name="user">The user.</param>
+        </member>
+        <member name="M:Task02.Models.BaseAccount.ValidBalance(System.Decimal)">
+            <summary>
+            Determines whether a balance transaction is possible or not.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="T:Task02.Models.GoldAccount">
+            <summary>
+            Instacne of Gold Account.
+            </summary>
+        </member>
+        <member name="M:Task02.Models.GoldAccount.#ctor(System.String,Task02.Models.User)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02.Models.GoldAccount"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="user">The user.</param>
+        </member>
+        <member name="M:Task02.Models.GoldAccount.ValidBalance(System.Decimal)">
+            <summary>
+            Determines whether a balance transaction is possible or not.
+            </summary>
+            <param name="value">The value/</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="T:Task02.Models.PlatinumAccount">
+            <summary>
+            Instance of Platinum Account.
+            </summary>
+        </member>
+        <member name="M:Task02.Models.PlatinumAccount.#ctor(System.String,Task02.Models.User)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02.Models.PlatinumAccount"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="user">The user.</param>
+        </member>
+        <member name="M:Task02.Models.PlatinumAccount.ValidBalance(System.Decimal)">
+            <summary>
+            Determines whether a balance transaction is possible or not.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="T:Task02.Models.User">
+            <summary>
+            Instance of a user.
+            </summary>
+        </member>
+        <member name="M:Task02.Models.User.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02.Models.User"/> class.
+            </summary>
+            <param name="firstName">The first name.</param>
+            <param name="lastName">The last naem.</param>
+        </member>
+        <member name="P:Task02.Models.User.FirstName">
+            <summary>
+            Gets or sets first name.
+            </summary>
+            <value>
+            First name.
+            </value>
+        </member>
+        <member name="P:Task02.Models.User.LastName">
+            <summary>
+            Gets or sets last name.
+            </summary>
+            <value>
+            Last name.
+            </value>
+        </member>
+        <member name="M:Task02.Models.User.ToString">
+            <summary>
+            Returns <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="M:Task02.Models.User.GetHashCode">
+            <summary>
+            Return a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance.</returns>
+        </member>
+        <member name="T:Task02.Storages.IStorage">
+            <summary>
+            Storage.
+            </summary>
+        </member>
+        <member name="T:Task02.Storages.Storage">
+            <summary>
+            Storage based on list.
+            </summary>
+        </member>
+        <member name="M:Task02.Storages.Storage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02.Storages.Storage"/> class.
+            </summary>
+        </member>
+        <member name="M:Task02.Storages.Storage.Create(Task02.Models.BankAccount)">
+            <summary>
+            Create a bank account.
+            </summary>
+            <param name="bankAccount">The account.</param>
+        </member>
+        <member name="M:Task02.Storages.Storage.Update(Task02.Models.BankAccount)">
+            <summary>
+            Uodates a bank account.
+            </summary>
+            <param name="bankAccount">The account.</param>
+        </member>
+        <member name="M:Task02.Storages.Storage.GetById(System.String)">
+            <summary>
+            Gets the bank account by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns><see cref="T:Task02.Models.BankAccount"/></returns>
+        </member>
+    </members>
+</doc>

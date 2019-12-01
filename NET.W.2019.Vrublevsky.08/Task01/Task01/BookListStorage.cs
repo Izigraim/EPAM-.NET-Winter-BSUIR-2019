@@ -6,10 +6,17 @@ using System.Text.RegularExpressions;
 
 namespace Task01
 {
+    /// <summary>
+    /// A clas for working with a book store.
+    /// </summary>
     internal static class BookListStorage
     {
         private static readonly string path = AppDomain.CurrentDomain.BaseDirectory + "Books.dat";
 
+        /// <summary>
+        /// Add new <see cref="Book"/> to binary file.
+        /// </summary>
+        /// <param name="b">Instance of <see cref="Book"/></param>
         public static void AddToFile(Book b)
         {
             try
@@ -31,6 +38,10 @@ namespace Task01
             }
         }
 
+        /// <summary>
+        /// Read all book from file.
+        /// </summary>
+        /// <returns>List of books.</returns>
         public static List<Book> ReadFromFile()
         {
             List<Book> booksFromFile = new List<Book>();
@@ -62,6 +73,10 @@ namespace Task01
             return booksFromFile;
         }
 
+        /// <summary>
+        /// Save sorted list of books to file.
+        /// </summary>
+        /// <param name="books">Sorted list of books.</param>
         public static void SaveSortToFile(List<Book> books)
         {
             try
@@ -86,6 +101,10 @@ namespace Task01
             }
         }
 
+        /// <summary>
+        /// Remove <see cref="Book"/> from file.
+        /// </summary>
+        /// <param name="books">List of books without removed book.</param>
         public static void RemoveFromFile(List<Book> books)
         {
             try
