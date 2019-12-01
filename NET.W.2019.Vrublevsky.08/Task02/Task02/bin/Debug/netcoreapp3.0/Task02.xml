@@ -14,7 +14,7 @@
             Initializes a new instance of the <see cref="T:Task02.Logic.BankAccountService"/> class.
             </summary>
         </member>
-        <member name="M:Task02.Logic.BankAccountService.OpenAccount(Task02.Models.User,Task02.Models.AccountType,System.String@)">
+        <member name="M:Task02.Logic.BankAccountService.OpenAccount(Task02.Models.User,Task02.Models.AccountType)">
             <summary>
             Opens the account.
             </summary>
@@ -47,7 +47,13 @@
             Gets info about account.
             </summary>
             <param name="id">The indentifier.</param>
-            <returns></returns>
+            <returns>The string that represent account info.</returns>
+        </member>
+        <member name="M:Task02.Logic.BankAccountService.GetAllAccounts">
+            <summary>
+            Gets all accounts.
+            </summary>
+            <returns>All accounts.</returns>
         </member>
         <member name="M:Task02.Logic.BankAccountService.GenerateAccountId(System.String)">
             <summary>
@@ -70,6 +76,49 @@
             <summary>
             Instance of bank account.
             </summary>
+        </member>
+        <member name="M:Task02.Models.BankAccount.#ctor(System.String,Task02.Models.User,Task02.Models.AccountType,Task02.Models.AccountStatus,System.Decimal,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02.Models.BankAccount"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="user">The user.</param>
+            <param name="accountType">The account type.</param>
+            <param name="status">The status.</param>
+            <param name="balance">The balance.</param>
+            <param name="bonus">The bonus.</param>
+        </member>
+        <member name="P:Task02.Models.BankAccount.AccountType">
+            <summary>
+            Gets or sets account type.
+            </summary>
+            <value>
+            Account type.
+            </value>
+        </member>
+        <member name="P:Task02.Models.BankAccount.user">
+            <summary>
+            Gets or sets user.
+            </summary>
+            <value>
+            User.
+            </value>
+        </member>
+        <member name="P:Task02.Models.BankAccount.balance">
+            <summary>
+            Gets or sets balance.
+            </summary>
+            <value>
+            Balance.
+            </value>
+        </member>
+        <member name="P:Task02.Models.BankAccount.bonusPoints">
+            <summary>
+            Gets or sets bonus points.
+            </summary>
+            <value>
+            Bonus points.
+            </value>
         </member>
         <member name="P:Task02.Models.BankAccount.Id">
             <summary>
@@ -124,12 +173,16 @@
             Instance of base account.
             </summary>
         </member>
-        <member name="M:Task02.Models.BaseAccount.#ctor(System.String,Task02.Models.User)">
+        <member name="M:Task02.Models.BaseAccount.#ctor(System.String,Task02.Models.User,Task02.Models.AccountType,Task02.Models.AccountStatus,System.Decimal,System.Int32)">
             <summary>
             Initializes a new instance of the <see cref="T:Task02.Models.BaseAccount"/> class.
             </summary>
             <param name="id">THe identifier.</param>
             <param name="user">The user.</param>
+            <param name="accountType">The account type.</param>
+            <param name="status">The status.</param>
+            <param name="balance">The balance.</param>
+            <param name="bonus">The bonus.</param>
         </member>
         <member name="M:Task02.Models.BaseAccount.ValidBalance(System.Decimal)">
             <summary>
@@ -143,12 +196,16 @@
             Instacne of Gold Account.
             </summary>
         </member>
-        <member name="M:Task02.Models.GoldAccount.#ctor(System.String,Task02.Models.User)">
+        <member name="M:Task02.Models.GoldAccount.#ctor(System.String,Task02.Models.User,Task02.Models.AccountType,Task02.Models.AccountStatus,System.Decimal,System.Int32)">
             <summary>
             Initializes a new instance of the <see cref="T:Task02.Models.GoldAccount"/> class.
             </summary>
             <param name="id">The identifier.</param>
             <param name="user">The user.</param>
+            <param name="accountType">The account type.</param>
+            <param name="status">The status.</param>
+            <param name="balance">The balance.</param>
+            <param name="bonus">The bonus.</param>
         </member>
         <member name="M:Task02.Models.GoldAccount.ValidBalance(System.Decimal)">
             <summary>
@@ -162,12 +219,16 @@
             Instance of Platinum Account.
             </summary>
         </member>
-        <member name="M:Task02.Models.PlatinumAccount.#ctor(System.String,Task02.Models.User)">
+        <member name="M:Task02.Models.PlatinumAccount.#ctor(System.String,Task02.Models.User,Task02.Models.AccountType,Task02.Models.AccountStatus,System.Decimal,System.Int32)">
             <summary>
             Initializes a new instance of the <see cref="T:Task02.Models.PlatinumAccount"/> class.
             </summary>
             <param name="id">The identifier.</param>
             <param name="user">The user.</param>
+            <param name="accountType">The account type.</param>
+            <param name="status">The status.</param>
+            <param name="balance">The balance.</param>
+            <param name="bonus">The bonus.</param>
         </member>
         <member name="M:Task02.Models.PlatinumAccount.ValidBalance(System.Decimal)">
             <summary>
@@ -249,6 +310,12 @@
             </summary>
             <param name="id">The identifier.</param>
             <returns><see cref="T:Task02.Models.BankAccount"/></returns>
+        </member>
+        <member name="M:Task02.Storages.Storage.GetAllAccounts">
+            <summary>
+            Return list of all accounts.
+            </summary>
+            <returns>Lsit of accounts.</returns>
         </member>
     </members>
 </doc>

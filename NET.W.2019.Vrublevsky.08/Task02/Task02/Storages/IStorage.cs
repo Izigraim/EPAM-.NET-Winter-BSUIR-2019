@@ -15,5 +15,7 @@ namespace Task02.Storages
         BankAccount GetById(string id);
 
         void Update(BankAccount bankAccount);
+
+        List<BankAccount> GetAllAccounts();
     }
 }

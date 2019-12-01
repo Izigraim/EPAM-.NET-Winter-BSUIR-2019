@@ -14,11 +14,19 @@ namespace Task02.Models
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <param name="user">The user.</param>
-        public GoldAccount(string id, User user)
-            : base(id, user)
+        /// <param name="accountType">The account type.</param>
+        /// <param name="status">The status.</param>
+        /// <param name="balance">The balance.</param>
+        /// <param name="bonus">The bonus.</param>
+        public GoldAccount(string id, User user, AccountType accountType, AccountStatus status, decimal balance, int bonus)
+            : base(id, user, accountType, status, balance, bonus)
         {
             this.costDeposite = 100;
             this.costBalance = this.costDeposite * 2;
+            this.AccountType = accountType;
+            this.Status = status;
+            this.balance = balance;
+            this.bonusPoints = bonus;
         }
 
         /// <summary>

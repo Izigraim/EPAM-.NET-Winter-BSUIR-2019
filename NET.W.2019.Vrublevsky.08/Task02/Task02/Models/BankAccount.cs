@@ -12,15 +12,56 @@ namespace Task02.Models
         protected int costBalance;
         protected int costDeposite;
 
-        private User user;
-        private decimal balance;
-        private int bonusPoints;
-
-        protected BankAccount(string id, User user)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BankAccount"/> class.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <param name="user">The user.</param>
+        /// <param name="accountType">The account type.</param>
+        /// <param name="status">The status.</param>
+        /// <param name="balance">The balance.</param>
+        /// <param name="bonus">The bonus.</param>
+        protected BankAccount(string id, User user, AccountType accountType, AccountStatus status, decimal balance, int bonus)
         {
             this.Id = id;
             this.user = user;
+            this.AccountType = accountType;
+            this.Status = status;
+            this.balance = balance;
+            this.bonusPoints = bonus;
         }
+
+        /// <summary>
+        /// Gets or sets account type.
+        /// </summary>
+        /// <value>
+        /// Account type.
+        /// </value>
+        public AccountType AccountType { get; set; }
+
+        /// <summary>
+        /// Gets or sets user.
+        /// </summary>
+        /// <value>
+        /// User.
+        /// </value>
+        public User user { get; set; }
+
+        /// <summary>
+        /// Gets or sets balance.
+        /// </summary>
+        /// <value>
+        /// Balance.
+        /// </value>
+        public decimal balance { get; set; }
+
+        /// <summary>
+        /// Gets or sets bonus points.
+        /// </summary>
+        /// <value>
+        /// Bonus points.
+        /// </value>
+        public int bonusPoints { get; set; }
 
         /// <summary>
         /// Gets or sets the identifier.

@@ -27,34 +27,34 @@ namespace Task02.Logic
         /// <param name="user">The user.</param>
         /// <param name="accountType">The type of account.</param>
         /// <param name="id">The identifier.</param>
-        public void OpenAccount(User user, AccountType accountType, out string id)
+        public void OpenAccount(User user, AccountType accountType)
         {
             BankAccount bankAccount;
-            id = this.GenerateAccountId(user.ToString() + " " + accountType.ToString());
+            string id = this.GenerateAccountId(user.ToString() + " " + accountType.ToString());
 
             switch ((int)accountType)
             {
                 case 0:
                     {
-                        bankAccount = new BaseAccount(id, user);
+                        bankAccount = new BaseAccount(id, user, accountType, AccountStatus.Open, 0, 0);
                         break;
                     }
 
                 case 1:
                     {
-                        bankAccount = new GoldAccount(id, user);
+                        bankAccount = new GoldAccount(id, user, accountType, AccountStatus.Open, 0, 0);
                         break;
                     }
 
                 case 2:
                     {
-                        bankAccount = new PlatinumAccount(id, user);
+                        bankAccount = new PlatinumAccount(id, user, accountType, AccountStatus.Open, 0, 0);
                         break;
                     }
 
                 default:
                     {
-                        bankAccount = new BaseAccount(id, user);
+                        bankAccount = new BaseAccount(id, user, accountType, AccountStatus.Open, 0, 0);
                         break;
                     }
             }
@@ -107,11 +107,20 @@ namespace Task02.Logic
         /// Gets info about account.
         /// </summary>
         /// <param name="id">The indentifier.</param>
-        /// <returns></returns>
+        /// <returns>The string that represent account info.</returns>
         public string Info(string id)
         {
             BankAccount bankAccount = this.bankAccounts.GetById(id);
             return bankAccount.ToString();
+        }
+
+        /// <summary>
+        /// Gets all accounts.
+        /// </summary>
+        /// <returns>All accounts.</returns>
+        public List<BankAccount> GetAllAccounts()
+        {
+            return this.bankAccounts.GetAllAccounts();
         }
 
         /// <summary>

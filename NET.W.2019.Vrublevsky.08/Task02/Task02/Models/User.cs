@@ -20,10 +20,11 @@ namespace Task02.Models
             this.FirstName = firstName;
             this.LastName = lastName;
 
-            if (!this.Checker())
-            {
-                throw new ArgumentException("User's data is incorrect.");
-            }
+            // This paty of code is commented out for easy testing of the application.
+            // if (!this.Checker())
+            // {
+            //    throw new ArgumentException("User's data is incorrect.");
+            // }
         }
 
         /// <summary>
