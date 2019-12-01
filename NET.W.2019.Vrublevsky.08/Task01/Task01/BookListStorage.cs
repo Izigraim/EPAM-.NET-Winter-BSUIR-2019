@@ -48,7 +48,7 @@ namespace Task01
 
             try
             {
-                using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)))
+                using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.OpenOrCreate)))
                 {
                     while (reader.PeekChar() > -1)
                     {

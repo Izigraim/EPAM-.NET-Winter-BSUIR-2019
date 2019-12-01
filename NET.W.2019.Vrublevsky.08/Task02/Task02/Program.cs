@@ -11,11 +11,12 @@ namespace Task02
         {
             BankAccountService bankAccountService = new BankAccountService();
 
+            bankAccountService.OpenAccount(new User("asfasf", "safasf"), AccountType.Platinum);
+
             foreach (BankAccount bankAccount in bankAccountService.GetAllAccounts())
             {
                 Console.WriteLine(bankAccount.ToString());
             }
-
         }
     }
 }
