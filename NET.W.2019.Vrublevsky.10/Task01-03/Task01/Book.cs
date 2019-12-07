@@ -173,8 +173,31 @@ namespace Task01
         /// <returns>String that represents this instance.</returns>
         public override string ToString()
         {
+            return this.ToString(string.Empty);
+        }
+
+        public string ToString(string fmt)
+        {
             string priceUs = string.Format(new CultureInfo("en-US"), "{0:c}", this.Price);
-            return $"{this.ISBN} - {this.Author} - {this.Name} - {this.Publishing} - {this.YearOfPublishing} - {this.CountOfPages} - {priceUs}";
+
+            switch (fmt.ToUpper(new CultureInfo("en-US")))
+            {
+                case "A":
+                    return string.Format("{0}, {1}", this.Author, this.Name);
+
+                case "B":
+                    return string.Format("{0}, {1}, {2}", this.Author, this.Name, this.Publishing);
+
+                case "C":
+                    return string.Format("ISBN {0}, {1}, {2}, {3}, {4}, P. {5}.", this.ISBN, this.Author, this.Name, this.Publishing, this.YearOfPublishing, this.CountOfPages);
+
+                case "D":
+                    return string.Format("ISBN {0}, {1}, {2}, {3}, {4}, P. {5}, {6}", this.ISBN, this.Author, this.Name, this.Publishing, this.YearOfPublishing, this.CountOfPages, priceUs);
+
+                default:
+                    return $"{this.ISBN} - {this.Author} - {this.Name} - {this.Publishing} - {this.YearOfPublishing} - {this.CountOfPages} - {priceUs}";
+
+            }
         }
 
         /// <summary>

@@ -10,8 +10,26 @@ namespace Task01
 
         public static void AddBook()
         {
-            Console.Write("ISBN: ");
-            string isbn = Console.ReadLine();
+            string isbn;
+            while (true)
+            {
+                try
+                {
+                    Console.Write("ISBN: ");
+                    isbn = Console.ReadLine();
+                    if (isbn.Length != 13)
+                    {
+                        throw new FormatException();
+                    }
+
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("ISBN consist of 13 numbers.");
+                }
+            }
+
             Console.Write("Author: ");
             string author = Console.ReadLine();
             Console.Write("Name: ");
