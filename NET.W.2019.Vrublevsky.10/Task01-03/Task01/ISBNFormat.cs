@@ -5,10 +5,18 @@ using System.Text;
 
 namespace Task01
 {
+    /// <summary>
+    /// Convert an ISBN string to formatted form.
+    /// </summary>
     public class ISBNFormat : IFormatProvider, ICustomFormatter
     {
         private const int ISBNlenght = 13;
 
+        /// <summary>
+        /// Return current ISBNFormat.
+        /// </summary>
+        /// <param name="formatType">Type</param>
+        /// <returns>Current ISBNFormat.</returns>
         public object GetFormat(Type formatType)
         {
             if (formatType == typeof(ICustomFormatter))
@@ -21,6 +29,13 @@ namespace Task01
             }
         }
 
+        /// <summary>
+        /// Convert string to formatted form.
+        /// </summary>
+        /// <param name="fmt">Format.</param>
+        /// <param name="arg">Arguments.</param>
+        /// <param name="formatProvider">Class that implement IFormatProvider.</param>
+        /// <returns>Formatted string or FormatException.</returns>
         public string Format(string fmt, object arg, IFormatProvider formatProvider)
         {
             if (arg.GetType() != typeof(string))

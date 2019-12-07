@@ -176,6 +176,11 @@ namespace Task01
             return this.ToString(string.Empty);
         }
 
+        /// <summary>
+        /// Returns string that represents this instance in different formats.
+        /// </summary>
+        /// <param name="fmt">The format.</param>
+        /// <returns>String that represents this instance in selected format.</returns>
         public string ToString(string fmt)
         {
             string priceUs = string.Format(new CultureInfo("en-US"), "{0:c}", this.Price);
