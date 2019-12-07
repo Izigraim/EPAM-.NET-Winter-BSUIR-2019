@@ -170,6 +170,8 @@ namespace Task01
             {
                 Console.Clear();
                 int i;
+
+                // Console.WriteLine(string.Format(new ISBNFormat(), "{0:ISBN}", "1234567890123"));
                 Console.WriteLine("1. Add new book.");
                 Console.WriteLine("2. Remove book.");
                 Console.WriteLine("3. Show all books.");
