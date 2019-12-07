@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Task01
 {
-    internal class ISBNFormat : IFormatProvider, ICustomFormatter
+    public class ISBNFormat : IFormatProvider, ICustomFormatter
     {
         private const int ISBNlenght = 13;
 

@@ -7,7 +7,7 @@ namespace Task01
     /// <summary>
     /// Specified exceptions for <see cref="Book"/>.
     /// </summary>
-    internal class BookException : ArgumentException
+    public class BookException : ArgumentException
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BookException"/> class.

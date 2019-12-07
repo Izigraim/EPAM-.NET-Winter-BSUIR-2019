@@ -10,7 +10,7 @@ namespace Task01
     /// <summary>
     /// Book.
     /// </summary>
-    internal class Book : IEquatable<Book>
+    public class Book : IEquatable<Book>
     {
 
         /// <summary>

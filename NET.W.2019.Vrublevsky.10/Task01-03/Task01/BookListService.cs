@@ -10,7 +10,7 @@ namespace Task01
     /// <summary>
     /// Service to work with a books.
     /// </summary>
-    internal class BookListService
+    public class BookListService
     {
         private List<Book> books = BookListStorage.ReadFromFile();
 

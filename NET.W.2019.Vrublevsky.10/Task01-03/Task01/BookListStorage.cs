@@ -9,7 +9,7 @@ namespace Task01
     /// <summary>
     /// A clas for working with a book store.
     /// </summary>
-    internal static class BookListStorage
+    public static class BookListStorage
     {
         private static readonly string path = AppDomain.CurrentDomain.BaseDirectory + "Books.dat";
 
