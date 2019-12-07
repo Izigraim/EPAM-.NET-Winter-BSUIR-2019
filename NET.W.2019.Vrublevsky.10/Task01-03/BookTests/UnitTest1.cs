@@ -15,11 +15,11 @@ namespace BookTests
         private static object[] _bookToStringBSource = { new object[] { new Book("1234567891234", "1", "1", "1", 1, 1, 1.0), "1, 1, 1" },
                                                         new object[] { new Book("1478587272778", "2", "2", "2", 2, 2, 2.0), "2, 2, 2" } };
 
-        private static object[] _bookToStringCSource = { new object[] { new Book("1234567891234", "1", "1", "1", 1, 1, 1.0), "ISBN 1234567891234, 1, 1, 1, 1, P. 1." },
-                                                        new object[] { new Book("1478587272778", "2", "2", "2", 2, 2, 2.0), "ISBN 1478587272778, 2, 2, 2, 2, P. 2." } };
+        private static object[] _bookToStringCSource = { new object[] { new Book("1234567891234", "1", "1", "1", 1, 1, 1.0), "ISBN 123-4-5678-9123-4, 1, 1, 1, 1, P. 1." },
+                                                        new object[] { new Book("1478587272778", "2", "2", "2", 2, 2, 2.0), "ISBN 147-8-5872-7277-8, 2, 2, 2, 2, P. 2." } };
 
-        private static object[] _bookToStringDSource = { new object[] { new Book("1234567891234", "1", "1", "1", 1, 1, 1.0), "ISBN 1234567891234, 1, 1, 1, 1, P. 1, $1.00" },
-                                                        new object[] { new Book("1478587272778", "2", "2", "2", 2, 2, 2.0), "ISBN 1478587272778, 2, 2, 2, 2, P. 2, $2.00" } };
+        private static object[] _bookToStringDSource = { new object[] { new Book("1234567891234", "1", "1", "1", 1, 1, 1.0), "ISBN 123-4-5678-9123-4, 1, 1, 1, 1, P. 1, $1.00" },
+                                                        new object[] { new Book("1478587272778", "2", "2", "2", 2, 2, 2.0), "ISBN 147-8-5872-7277-8, 2, 2, 2, 2, P. 2, $2.00" } };
 
         [Test, TestCaseSource("_bookToStringDefaultSource")]
         public static void BookToStringTest(Book b, string expected)

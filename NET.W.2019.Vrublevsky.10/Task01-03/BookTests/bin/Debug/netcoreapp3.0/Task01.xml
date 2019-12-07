@@ -113,6 +113,13 @@
             </summary>
             <returns>String that represents this instance.</returns>
         </member>
+        <member name="M:Task01.Book.ToString(System.String)">
+            <summary>
+            Returns string that represents this instance in different formats.
+            </summary>
+            <param name="fmt">The format.</param>
+            <returns>String that represents this instance in selected format.</returns>
+        </member>
         <member name="M:Task01.Book.GetHashCode">
             <summary>
             The override of GetHasCode method.
@@ -249,6 +256,27 @@
             Remove <see cref="T:Task01.Book"/> from file.
             </summary>
             <param name="books">List of books without removed book.</param>
+        </member>
+        <member name="T:Task01.ISBNFormat">
+            <summary>
+            Convert an ISBN string to formatted form.
+            </summary>
+        </member>
+        <member name="M:Task01.ISBNFormat.GetFormat(System.Type)">
+            <summary>
+            Return current ISBNFormat.
+            </summary>
+            <param name="formatType">Type</param>
+            <returns>Current ISBNFormat.</returns>
+        </member>
+        <member name="M:Task01.ISBNFormat.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+            Convert string to formatted form.
+            </summary>
+            <param name="fmt">Format.</param>
+            <param name="arg">Arguments.</param>
+            <param name="formatProvider">Class that implement IFormatProvider.</param>
+            <returns>Formatted string or FormatException.</returns>
         </member>
     </members>
 </doc>

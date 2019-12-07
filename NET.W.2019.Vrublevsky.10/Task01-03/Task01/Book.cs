@@ -188,16 +188,16 @@ namespace Task01
             switch (fmt.ToUpper(new CultureInfo("en-US")))
             {
                 case "A":
-                    return string.Format("{0}, {1}", this.Author, this.Name);
+                    return string.Format(new ISBNFormat(), "{0}, {1}", this.Author, this.Name);
 
                 case "B":
-                    return string.Format("{0}, {1}, {2}", this.Author, this.Name, this.Publishing);
+                    return string.Format(new ISBNFormat(), "{0}, {1}, {2}", this.Author, this.Name, this.Publishing);
 
                 case "C":
-                    return string.Format("ISBN {0}, {1}, {2}, {3}, {4}, P. {5}.", this.ISBN, this.Author, this.Name, this.Publishing, this.YearOfPublishing, this.CountOfPages);
+                    return string.Format(new ISBNFormat() ,"ISBN {0:ISBN}, {1}, {2}, {3}, {4}, P. {5}.", this.ISBN, this.Author, this.Name, this.Publishing, this.YearOfPublishing, this.CountOfPages);
 
                 case "D":
-                    return string.Format("ISBN {0}, {1}, {2}, {3}, {4}, P. {5}, {6}", this.ISBN, this.Author, this.Name, this.Publishing, this.YearOfPublishing, this.CountOfPages, priceUs);
+                    return string.Format(new ISBNFormat() ,"ISBN {0:ISBN}, {1}, {2}, {3}, {4}, P. {5}, {6}", this.ISBN, this.Author, this.Name, this.Publishing, this.YearOfPublishing, this.CountOfPages, priceUs);
 
                 default:
                     return $"{this.ISBN} - {this.Author} - {this.Name} - {this.Publishing} - {this.YearOfPublishing} - {this.CountOfPages} - {priceUs}";
