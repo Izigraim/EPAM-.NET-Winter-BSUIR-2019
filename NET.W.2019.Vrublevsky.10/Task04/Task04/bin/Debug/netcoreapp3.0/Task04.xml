@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task04</name>
+    </assembly>
+    <members>
+        <member name="T:Task04.GCD">
+            <summary>
+            Class for finding greatest common divisor.
+            </summary>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidian(System.Int32,System.Int32)">
+            <summary>
+            Find GCD of two numbers by Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidian(System.Int32,System.Int32,System.Int64@)">
+            <summary>
+            Find GCD of two numbers by Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <param name="time">Elapsed time.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidian(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Find GCD of three numbers by Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <param name="c">The third number.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidian(System.Int32,System.Int32,System.Int32,System.Int64@)">
+            <summary>
+            Find GCD of three numbers by Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <param name="c">The third number.</param>
+            <param name="time">Elapsed time.</param>
+            <returns>Greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidian(System.Int32[])">
+            <summary>
+            Find GCD of four and more numbers by Euclidian's algorithm.
+            </summary>
+            <param name="arr">Numbers.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidian(System.Int64@,System.Int32[])">
+            <summary>
+            Find GCD of four and more numbers by Euclidian's algorithm.
+            </summary>
+            <param name="time">Elapsed time.</param>
+            <param name="arr">Numbers.</param>
+            <returns>Greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidianBinary(System.Int32,System.Int32)">
+            <summary>
+            Find GCD of two numbers by binary Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <returns>Greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidianBinary(System.Int32,System.Int32,System.Int64@)">
+            <summary>
+            Find GCD of two numbers by binary Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <param name="time">Elapsed time.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidianBinary(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Find GCD of three numbers by binary Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <param name="c">The third number.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidianBinary(System.Int32,System.Int32,System.Int32,System.Int64@)">
+            <summary>
+            Find GCD of three numbers by binary Euclidian's algorithm.
+            </summary>
+            <param name="a">The first number.</param>
+            <param name="b">The second number.</param>
+            <param name="c">The third number.</param>
+            <param name="time">Elapsed time.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidianBinary(System.Int32[])">
+            <summary>
+            Find GCD of four and more numbers by binary Euclidian's algorithm.
+            </summary>
+            <param name="arr">Numbers.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+        <member name="M:Task04.GCD.GCDEuclidianBinary(System.Int64@,System.Int32[])">
+            <summary>
+            Find GCD of four and more numbers by binary Euclidian's algorithm.
+            </summary>
+            <param name="time">Elapsed time.</param>
+            <param name="arr">Numbers.</param>
+            <returns>The greatest common divisor.</returns>
+        </member>
+    </members>
+</doc>
