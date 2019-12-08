@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task05</name>
+    </assembly>
+    <members>
+        <member name="M:Task05.JaggedArraySort.SumByAsc(System.Int32[][])">
+            <summary>
+            Sorting jagged array in ascending order of sums of matrix row elements.
+            </summary>
+            <param name="array">Unsorted array.</param>
+            <returns>Sorted array.</returns>
+        </member>
+        <member name="M:Task05.JaggedArraySort.SumByDesc(System.Int32[][])">
+            <summary>
+            Sorting jagged array in descending order of sums of matrix row elements.
+            </summary>
+            <param name="array">Unsorted array.</param>
+            <returns>Sorted array.</returns>
+        </member>
+        <member name="M:Task05.JaggedArraySort.MaxByAsc(System.Int32[][])">
+            <summary>
+            Sorting jagged array in ascending order of the maximum elements of the matrix rows.
+            </summary>
+            <param name="array">Unsorted array.</param>
+            <returns>Sorted array.</returns>
+        </member>
+        <member name="M:Task05.JaggedArraySort.MaxByDesc(System.Int32[][])">
+            <summary>
+            Sorting jagged array in descending order of the maximum elements of the matrix rows.
+            </summary>
+            <param name="array">Usorted array.</param>
+            <returns>Sorted array.</returns>
+        </member>
+        <member name="M:Task05.JaggedArraySort.MinByAsc(System.Int32[][])">
+            <summary>
+            Sorting jagged array in descending order of minimum elements of the matrix rows.
+            </summary>
+            <param name="array">Unsorted array.</param>
+            <returns>Sorted array.</returns>
+        </member>
+        <member name="M:Task05.JaggedArraySort.MinByDesc(System.Int32[][])">
+            <summary>
+            Sorting jagged array in descending order of the minimum elements of the matrix rows.
+            </summary>
+            <param name="array">Unsorted array.</param>
+            <returns>Sorted array.</returns>
+        </member>
+    </members>
+</doc>
