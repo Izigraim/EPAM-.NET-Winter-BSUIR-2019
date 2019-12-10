@@ -46,7 +46,7 @@ namespace Task01
                 }
                 catch (FormatException e)
                 {
-                    Program.Logger.Error(string.Format("The format of '{0}' is invalid.", fmt), e);
+                    Program.Logger.Error(string.Format("The format of '{0}' is invalid.", fmt));
                 }
             }
 
@@ -68,7 +68,7 @@ namespace Task01
                 }
                 catch (FormatException e)
                 {
-                    Program.Logger.Error(string.Format("The format of '{0}' is invalid.", fmt), e);
+                    Program.Logger.Error(string.Format("The format of '{0}' is invalid.", fmt));
                 }
             }
 

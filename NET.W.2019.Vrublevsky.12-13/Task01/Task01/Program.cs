@@ -7,7 +7,7 @@ namespace Task01
 {
     internal class Program
     {
-        public static Logger Logger = LogManager.GetCurrentClassLogger();
+        public static ILogger Logger = new NLogger();
 
         private static readonly BookListService BookListService = new BookListService();
 
@@ -175,8 +175,8 @@ namespace Task01
                 Console.Clear();
                 int i;
 
-                Logger.Trace("Version: {0}", Environment.Version.ToString(), new CultureInfo("en-US"));
-                Logger.Trace("OS: {0}", Environment.OSVersion.ToString(), new CultureInfo("en-US"));
+                Logger.Trace($"Version: {Environment.Version.ToString()}");
+                Logger.Trace($"OS: {Environment.OSVersion.ToString()}");
 
                 Console.WriteLine("1. Add new book.");
                 Console.WriteLine("2. Remove book.");
