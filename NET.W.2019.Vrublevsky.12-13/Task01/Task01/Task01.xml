@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task01</name>
+    </assembly>
+    <members>
+        <member name="T:Task01.Book">
+            <summary>
+            Book.
+            </summary>
+        </member>
+        <member name="M:Task01.Book.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task01.Book"/> class.
+            </summary>
+            <param name="isbn">ISBN.</param>
+            <param name="author">Author.</param>
+            <param name="name">Name.</param>
+            <param name="publishing">Publishing.</param>
+            <param name="yearOfPublishing">Year of publishing.</param>
+            <param name="countOfPages">Count of pages.</param>
+            <param name="price">Price.</param>
+        </member>
+        <member name="P:Task01.Book.ISBN">
+            <summary>
+            Gets or sets ISBN.
+            </summary>
+            <value>
+            ISBN.
+            </value>
+        </member>
+        <member name="P:Task01.Book.Author">
+            <summary>
+            Gets or sets Author.
+            </summary>
+            <value>
+            Author.
+            </value>
+        </member>
+        <member name="P:Task01.Book.Name">
+            <summary>
+            Gets or sets Name.
+            </summary>
+            <value>
+            Name.
+            </value>
+        </member>
+        <member name="P:Task01.Book.Publishing">
+            <summary>
+            Gets or sets publishing.
+            </summary>
+            <value>
+            Publishing.
+            </value>
+        </member>
+        <member name="P:Task01.Book.YearOfPublishing">
+            <summary>
+            Gets or sets year of publishing.
+            </summary>
+            <value>
+            Year of publishing.
+            </value>
+        </member>
+        <member name="P:Task01.Book.CountOfPages">
+            <summary>
+            Gets or sets count of pages.
+            </summary>
+            <value>
+            Count of pages.
+            </value>
+        </member>
+        <member name="P:Task01.Book.Price">
+            <summary>
+            Gets or sets price.
+            </summary>
+            <value>
+            Price.
+            </value>
+        </member>
+        <member name="M:Task01.Book.op_Equality(Task01.Book,Task01.Book)">
+            <summary>
+            Override '==' operator for <see cref="T:Task01.Book"/> class.
+            </summary>
+            <param name="b1">The first book.</param>
+            <param name="b2">The second book.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="M:Task01.Book.op_Inequality(Task01.Book,Task01.Book)">
+            <summary>
+            Override '!=' operator for <see cref="T:Task01.Book"/> class.
+            </summary>
+            <param name="b1">The first book.</param>
+            <param name="b2">The second book.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="M:Task01.Book.Equals(Task01.Book)">
+            <summary>
+            Indecates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="b">An another object to compare with this object.</param>
+            <returns>True if the current object is equal. Otherwise, false.</returns>
+        </member>
+        <member name="M:Task01.Book.Equals(System.Object)">
+            <summary>
+            Indecates whether the current object is equal to another object of the another type.
+            </summary>
+            <param name="obj">An another object to compare with this object.</param>
+            <returns>True if the current object is equal. Otherwise, false.</returns>
+        </member>
+        <member name="M:Task01.Book.ToString">
+            <summary>
+            Returns string that represents this instance.
+            </summary>
+            <returns>String that represents this instance.</returns>
+        </member>
+        <member name="M:Task01.Book.ToString(System.String)">
+            <summary>
+            Returns string that represents this instance in different formats.
+            </summary>
+            <param name="fmt">The format.</param>
+            <returns>String that represents this instance in selected format.</returns>
+        </member>
+        <member name="M:Task01.Book.GetHashCode">
+            <summary>
+            The override of GetHasCode method.
+            </summary>
+            <returns>GetHasCode of this instance.</returns>
+        </member>
+        <member name="M:Task01.Book.SortIsbn">
+            <summary>
+            Method for sorting by <see cref="P:Task01.Book.ISBN"/>  tag.
+            </summary>
+            <returns>IComparer for soring by <see cref="P:Task01.Book.ISBN"/> tag.</returns>
+        </member>
+        <member name="M:Task01.Book.SortAuthor">
+            <summary>
+            Method for sorting by <see cref="P:Task01.Book.Author"/>  tag.
+            </summary>
+            <returns>IComparer for sorting by <see cref="P:Task01.Book.Author"/> tag.</returns>
+        </member>
+        <member name="M:Task01.Book.SortName">
+            <summary>
+            Method for sorting by <see cref="P:Task01.Book.Name"/>  tag.
+            </summary>
+            <returns>OComparer for sorting by <see cref="P:Task01.Book.Name"/> tag.</returns>
+        </member>
+        <member name="M:Task01.Book.SortPublishing">
+            <summary>
+            Method for sorting by <see cref="P:Task01.Book.Publishing"/> tag.
+            </summary>
+            <returns>IComparer for sorting by <see cref="P:Task01.Book.Publishing"/> tag.</returns>
+        </member>
+        <member name="M:Task01.Book.SortYear">
+            <summary>
+            Method for sorting by <see cref="P:Task01.Book.YearOfPublishing"/> tag.
+            </summary>
+            <returns>IComparer for sorting by <see cref="P:Task01.Book.YearOfPublishing"/> tag.</returns>
+        </member>
+        <member name="M:Task01.Book.SortPages">
+            <summary>
+            Method for sorting by <see cref="P:Task01.Book.CountOfPages"/> tag.
+            </summary>
+            <returns>IComparer for sorting by <see cref="P:Task01.Book.CountOfPages"/> tag.</returns>
+        </member>
+        <member name="M:Task01.Book.SortPrice">
+            <summary>
+            Method for sorting by <see cref="P:Task01.Book.Price"/> tag.
+            </summary>
+            <returns>IComparer for sorting by <see cref="P:Task01.Book.Price"/> tag.</returns>
+        </member>
+        <member name="T:Task01.BookException">
+            <summary>
+            Specified exceptions for <see cref="T:Task01.Book"/>.
+            </summary>
+        </member>
+        <member name="M:Task01.BookException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task01.BookException"/> class.
+            </summary>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="M:Task01.BookException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task01.BookException"/> class.
+            </summary>
+        </member>
+        <member name="M:Task01.BookException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task01.BookException"/> class.
+            </summary>
+            <param name="message">Error message.</param>
+            <param name="innerException">Inner exception.</param>
+        </member>
+        <member name="T:Task01.BookListService">
+            <summary>
+            Service to work with a books.
+            </summary>
+        </member>
+        <member name="M:Task01.BookListService.AddBook(Task01.Book)">
+            <summary>
+            Add new <see cref="T:Task01.Book"/> to list..
+            </summary>
+            <param name="b"><see cref="T:Task01.Book"/> instance.</param>
+        </member>
+        <member name="M:Task01.BookListService.RemoveBook(Task01.Book)">
+            <summary>
+            Remove <see cref="T:Task01.Book"/> from list.
+            </summary>
+            <param name="b"><see cref="T:Task01.Book"/> instance.</param>
+        </member>
+        <member name="M:Task01.BookListService.GetBooks">
+            <summary>
+            Return list of all books.
+            </summary>
+            <returns>List of all books.</returns>
+        </member>
+        <member name="M:Task01.BookListService.FindByTag(System.String,System.String)">
+            <summary>
+            Find <see cref="T:Task01.Book"/> by tag.
+            </summary>
+            <param name="tag">Tag.</param>
+            <param name="find">Find query.</param>
+            <returns>Instance of book.</returns>
+        </member>
+        <member name="M:Task01.BookListService.SortByTag(System.String)">
+            <summary>
+            Sort list of books by tag.
+            </summary>
+            <param name="tag">Tag.</param>
+        </member>
+        <member name="T:Task01.BookListStorage">
+            <summary>
+            A clas for working with a book store.
+            </summary>
+        </member>
+        <member name="M:Task01.BookListStorage.AddToFile(Task01.Book)">
+            <summary>
+            Add new <see cref="T:Task01.Book"/> to binary file.
+            </summary>
+            <param name="b">Instance of <see cref="T:Task01.Book"/>.</param>
+        </member>
+        <member name="M:Task01.BookListStorage.ReadFromFile">
+            <summary>
+            Read all book from file.
+            </summary>
+            <returns>List of books.</returns>
+        </member>
+        <member name="M:Task01.BookListStorage.SaveSortToFile(System.Collections.Generic.List{Task01.Book})">
+            <summary>
+            Save sorted list of books to file.
+            </summary>
+            <param name="books">Sorted list of books.</param>
+        </member>
+        <member name="M:Task01.BookListStorage.RemoveFromFile(System.Collections.Generic.List{Task01.Book})">
+            <summary>
+            Remove <see cref="T:Task01.Book"/> from file.
+            </summary>
+            <param name="books">List of books without removed book.</param>
+        </member>
+        <member name="T:Task01.ISBNFormat">
+            <summary>
+            Convert an ISBN string to formatted form.
+            </summary>
+        </member>
+        <member name="M:Task01.ISBNFormat.GetFormat(System.Type)">
+            <summary>
+            Return current ISBNFormat.
+            </summary>
+            <param name="formatType">Type</param>
+            <returns>Current ISBNFormat.</returns>
+        </member>
+        <member name="M:Task01.ISBNFormat.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+            Convert string to formatted form.
+            </summary>
+            <param name="fmt">Format.</param>
+            <param name="arg">Arguments.</param>
+            <param name="formatProvider">Class that implement IFormatProvider.</param>
+            <returns>Formatted string or FormatException.</returns>
+        </member>
+    </members>
+</doc>
