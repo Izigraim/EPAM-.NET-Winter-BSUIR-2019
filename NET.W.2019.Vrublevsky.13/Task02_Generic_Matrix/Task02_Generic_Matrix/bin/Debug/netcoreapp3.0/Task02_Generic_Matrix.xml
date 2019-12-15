@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task02_Generic_Matrix</name>
+    </assembly>
+    <members>
+        <member name="T:Task02GenericMatrix.Matrix.DiagonalMatrix`1">
+            <summary>
+            Diagonal matrix class.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Task02GenericMatrix.Matrix.DiagonalMatrix`1.#ctor(`0[0:,0:])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02GenericMatrix.Matrix.DiagonalMatrix`1"/> class.
+            </summary>
+            <param name="array">Array.</param>
+        </member>
+        <member name="T:Task02GenericMatrix.Matrix.Matrix`1">
+            <summary>
+            Matrix.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+        </member>
+        <member name="M:Task02GenericMatrix.Matrix.Matrix`1.#ctor(`0[0:,0:])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02GenericMatrix.Matrix.Matrix`1"/> class.
+            </summary>
+            <param name="array">Array.</param>
+        </member>
+        <member name="E:Task02GenericMatrix.Matrix.Matrix`1.ElementChange">
+            <summary>
+            Occurs when element change.
+            </summary>
+        </member>
+        <member name="P:Task02GenericMatrix.Matrix.Matrix`1.Size">
+            <summary>
+            Gets or sets size.
+            </summary>
+            <value>
+            Size.
+            </value>
+        </member>
+        <member name="P:Task02GenericMatrix.Matrix.Matrix`1.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or sets the <see cref="!:T"/> with specified indexes.
+            </summary>
+            <param name="i">Row.</param>
+            <param name="j">Colomn.</param>
+            <returns>Value.</returns>
+        </member>
+        <member name="T:Task02GenericMatrix.Operations.AdditionalOfMatrixs">
+            <summary>
+            Additional extension to matrix class.
+            </summary>
+        </member>
+        <member name="M:Task02GenericMatrix.Operations.AdditionalOfMatrixs.Add``1(Task02GenericMatrix.Matrix.Matrix{``0},Task02GenericMatrix.Matrix.Matrix{``0})">
+            <summary>
+            Adds the specified matrix.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+            <param name="matrix1">First matrix.</param>
+            <param name="matrix2">Second matrix.</param>
+            <returns>Sum of matrixes.</returns>
+        </member>
+    </members>
+</doc>

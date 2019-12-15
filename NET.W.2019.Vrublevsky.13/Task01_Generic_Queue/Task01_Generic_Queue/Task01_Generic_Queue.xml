@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task01_Generic_Queue</name>
+    </assembly>
+    <members>
+        <member name="T:Task01GenericQueue.Queue`1">
+            <summary>
+            Generic Queue.
+            </summary>
+            <typeparam name="T">Type.</typeparam>
+        </member>
+        <member name="M:Task01GenericQueue.Queue`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task01GenericQueue.Queue`1"/> class.
+            </summary>
+        </member>
+        <member name="M:Task01GenericQueue.Queue`1.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task01GenericQueue.Queue`1"/> class.
+            </summary>
+            <param name="size">Size.</param>
+        </member>
+        <member name="P:Task01GenericQueue.Queue`1.Count">
+            <summary>
+            Gets count.
+            </summary>
+            <value>
+            Count.
+            </value>
+        </member>
+        <member name="M:Task01GenericQueue.Queue`1.Enqueue(`0)">
+            <summary>
+            Add element to queue.
+            </summary>
+            <param name="value">Element.</param>
+        </member>
+        <member name="M:Task01GenericQueue.Queue`1.Dequeue">
+            <summary>
+            Remove element from queue which was added firstly.
+            </summary>
+            <returns>Element.</returns>
+        </member>
+        <member name="M:Task01GenericQueue.Queue`1.Peek">
+            <summary>
+            Show last added element.
+            </summary>
+            <returns>Element.</returns>
+        </member>
+        <member name="M:Task01GenericQueue.Queue`1.GetEnumerator">
+            <summary>
+            Get enumerator that iterates through a queue.
+            </summary>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerator`1"/> object that can be used to iterate through queue.</returns>
+        </member>
+        <member name="T:Task01GenericQueue.Queue`1.QueueEnumerator`1">
+            <summary>
+            Enumerator class.
+            </summary>
+            <typeparam name="T">Type.</typeparam>
+        </member>
+    </members>
+</doc>
