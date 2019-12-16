@@ -4,6 +4,71 @@
         <name>Task02_Generic_Matrix</name>
     </assembly>
     <members>
+        <member name="T:Task02GenericMatrix.Events.ElementChange`1">
+            <summary>
+            Element change class.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+        </member>
+        <member name="M:Task02GenericMatrix.Events.ElementChange`1.Subscribe(Task02GenericMatrix.Matrix.Matrix{`0})">
+            <summary>
+            Subscribe the matrix to event.
+            </summary>
+            <param name="matrix"></param>
+        </member>
+        <member name="M:Task02GenericMatrix.Events.ElementChange`1.Unsubscribe(Task02GenericMatrix.Matrix.Matrix{`0})">
+            <summary>
+            Unsubscribe the matrix from event.
+            </summary>
+            <param name="matrix"></param>
+        </member>
+        <member name="T:Task02GenericMatrix.Events.ElementChangeEventArgs`1">
+            <summary>
+            Element change event args class.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+        </member>
+        <member name="M:Task02GenericMatrix.Events.ElementChangeEventArgs`1.#ctor(System.Int32,System.Int32,`0,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02GenericMatrix.Events.ElementChangeEventArgs`1"/> class.
+            </summary>
+            <param name="i">Row.</param>
+            <param name="j">Colomn.</param>
+            <param name="was">Old value of the element.</param>
+            <param name="became">New value of the element.</param>
+        </member>
+        <member name="P:Task02GenericMatrix.Events.ElementChangeEventArgs`1.I">
+            <summary>
+            Gets I.
+            </summary>
+            <value>
+            I.
+            </value>
+        </member>
+        <member name="P:Task02GenericMatrix.Events.ElementChangeEventArgs`1.J">
+            <summary>
+            Gets J.
+            </summary>
+            <value>
+            J.
+            </value>
+        </member>
+        <member name="P:Task02GenericMatrix.Events.ElementChangeEventArgs`1.Was">
+            <summary>
+            Gets was.
+            </summary>
+            <value>
+            Was.
+            </value>
+        </member>
+        <member name="P:Task02GenericMatrix.Events.ElementChangeEventArgs`1.Became">
+            <summary>
+            Gets Became.
+            </summary>
+            <value>
+            Became.
+            </value>
+        </member>
         <member name="T:Task02GenericMatrix.Matrix.DiagonalMatrix`1">
             <summary>
             Diagonal matrix class.
@@ -48,6 +113,36 @@
             <param name="i">Row.</param>
             <param name="j">Colomn.</param>
             <returns>Value.</returns>
+        </member>
+        <member name="M:Task02GenericMatrix.Matrix.Matrix`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns> An enumerator.</returns>
+        </member>
+        <member name="T:Task02GenericMatrix.Matrix.SimmetricMatrix`1">
+            <summary>
+            Simmetric matrix class.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Task02GenericMatrix.Matrix.SimmetricMatrix`1.#ctor(`0[0:,0:])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02GenericMatrix.Matrix.SimmetricMatrix`1"/> class.
+            </summary>
+            <param name="array">Array.</param>
+        </member>
+        <member name="T:Task02GenericMatrix.Matrix.SquareMatrix`1">
+            <summary>
+            Square matrix class.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Task02GenericMatrix.Matrix.SquareMatrix`1.#ctor(`0[0:,0:])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task02GenericMatrix.Matrix.SquareMatrix`1"/> class.
+            </summary>
+            <param name="array">Array.</param>
         </member>
         <member name="T:Task02GenericMatrix.Operations.AdditionalOfMatrixs">
             <summary>

@@ -112,7 +112,7 @@ namespace Task02GenericMatrix.Matrix
                 {
                     for (int j = 0; j < colomns; j++)
                     {
-                        if (!Equals(default, array[i,j]) || !Equals(default, array[j,i]))
+                        if (i != j && !Equals(default(T), array[i, j]))
                         {
                             throw new ArgumentException("Can't build diagonal matrix.");
                         }
