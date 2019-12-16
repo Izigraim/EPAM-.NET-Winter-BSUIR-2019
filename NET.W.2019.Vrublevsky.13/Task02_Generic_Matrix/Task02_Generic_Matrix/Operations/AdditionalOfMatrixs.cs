@@ -60,6 +60,19 @@ namespace Task02GenericMatrix.Operations
             ParameterExpression p1 = Expression.Parameter(typeof(T), "matrix1");
             ParameterExpression p2 = Expression.Parameter(typeof(T), "matrix2");
 
+            if (typeof(T) == typeof(string))
+            {
+                dynamic a = matrix1;
+                dynamic b = matrix2;
+
+                if (a == null || b == null)
+                {
+                    return default(T);
+                }
+
+                return a + b;
+            }
+
             Func<T, T, T> add = Expression.Lambda<Func<T, T, T>>(Expression.Add(p1, p2), p1, p2).Compile();
 
             return add(matrix1, matrix2);
