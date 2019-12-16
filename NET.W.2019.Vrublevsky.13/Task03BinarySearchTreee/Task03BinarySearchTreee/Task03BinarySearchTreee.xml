@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task03BinarySearchTreee</name>
+    </assembly>
+    <members>
+        <member name="T:Task03BinarySearchTreee.Tree.BinarySearchTree`1">
+            <summary>
+            Generic Binaty Search Tree.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.BinarySearchTree`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task03BinarySearchTreee.Tree.BinarySearchTree`1"/> class.
+            </summary>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.BinarySearchTree`1.#ctor(System.Collections.Generic.IComparer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task03BinarySearchTreee.Tree.BinarySearchTree`1"/> class.
+            </summary>
+            <param name="comparer">IComparer.</param>
+        </member>
+        <member name="P:Task03BinarySearchTreee.Tree.BinarySearchTree`1.Count">
+            <summary>
+            Gets or sets Count of elements in Tree.
+            </summary>
+            <value>
+            Count of elements in Tree.
+            </value>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.BinarySearchTree`1.Add(`0)">
+            <summary>
+            Add element to Binary Search Tree.
+            </summary>
+            <param name="element">Element to add.</param>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.BinarySearchTree`1.Remove(`0)">
+            <summary>
+            Remove element from Binary Search Tree.
+            </summary>
+            <param name="element">Element.</param>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.BinarySearchTree`1.InOrder">
+            <summary>
+            InOrder traversal.
+            </summary>
+            <returns>IEnumerable.</returns>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.BinarySearchTree`1.PostOrder">
+            <summary>
+            PostOrder traversal.
+            </summary>
+            <returns>IEnumerable.</returns>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.BinarySearchTree`1.PreOrder">
+            <summary>
+            PreOrder traversal.
+            </summary>
+            <returns>IEnumerable.</returns>
+        </member>
+        <member name="T:Task03BinarySearchTreee.Tree.Node`1">
+            <summary>
+            Node of the Binary Search Tree.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+        </member>
+        <member name="M:Task03BinarySearchTreee.Tree.Node`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Task03BinarySearchTreee.Tree.Node`1"/> class.
+            </summary>
+            <param name="element">Element.</param>
+        </member>
+        <member name="P:Task03BinarySearchTreee.Tree.Node`1.Element">
+            <summary>
+            Gets or sets element.
+            </summary>
+            <value>
+            Element.
+            </value>
+        </member>
+        <member name="P:Task03BinarySearchTreee.Tree.Node`1.Left">
+            <summary>
+            Gets or sets left <see cref="T:Task03BinarySearchTreee.Tree.Node`1"/>.
+            </summary>
+            <value>
+            Left <see cref="T:Task03BinarySearchTreee.Tree.Node`1"/>.
+            </value>
+        </member>
+        <member name="P:Task03BinarySearchTreee.Tree.Node`1.Right">
+            <summary>
+            Gets or sets right <see cref="T:Task03BinarySearchTreee.Tree.Node`1"/>.
+            </summary>
+            <value>
+            Right <see cref="T:Task03BinarySearchTreee.Tree.Node`1"/>.
+            </value>
+        </member>
+    </members>
+</doc>
