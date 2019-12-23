@@ -16,6 +16,7 @@ namespace BLL.ServiceImplementation
     public class BankAccountService : IAccountService
     {
         private IStorage bankAccounts;
+        private IAccountNumberCreateService numberCreateService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BankAccountService"/> class.
@@ -23,6 +24,7 @@ namespace BLL.ServiceImplementation
         public BankAccountService()
         {
             this.bankAccounts = new FakeStorage();
+            this.numberCreateService = new AccountNumberCreate();
         }
 
         /// <summary>
@@ -34,7 +36,7 @@ namespace BLL.ServiceImplementation
         public void OpenAccount(User user, AccountType accountType, out string id)
         {
             BankAccount bankAccount;
-            id = this.GenerateAccountId(user.ToString() + " " + accountType.ToString());
+            id = this.numberCreateService.GenerateAccountId(user.ToString() + " " + accountType.ToString());
 
             switch ((int)accountType)
             {
@@ -125,16 +127,6 @@ namespace BLL.ServiceImplementation
         public List<BankAccount> GetAllAccounts()
         {
             return this.bankAccounts.GetAllAccounts();
-        }
-
-        /// <summary>
-        /// Generates account identifier.
-        /// </summary>
-        /// <param name="key">The key.</param>
-        /// <returns>A <see cref="System.String"/> that used as identifier.</returns>
-        private string GenerateAccountId(string key)
-        {
-            return Math.Abs(key.GetHashCode()).ToString();
         }
     }
 }

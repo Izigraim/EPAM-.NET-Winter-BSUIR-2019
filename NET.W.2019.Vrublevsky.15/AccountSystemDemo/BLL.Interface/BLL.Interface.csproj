@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\AccountNumberCreate.cs" />
     <Compile Include="Entities\AccountStatus.cs" />
     <Compile Include="Entities\AccountType.cs" />
     <Compile Include="Entities\BankAccount.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="Entities\GoldAccount.cs" />
     <Compile Include="Entities\PlatinumAccount.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Interfaces\IAccountNumberCreateService.cs" />
     <Compile Include="Interfaces\IAccountService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
