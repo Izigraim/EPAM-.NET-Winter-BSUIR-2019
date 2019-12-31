@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XmlTask</name>
+    </assembly>
+    <members>
+        <member name="T:XmlTask.FileReader">
+            <summary>
+            Read Urls from file.
+            </summary>
+        </member>
+        <member name="M:XmlTask.FileReader.ReadFromFile(System.String)">
+            <summary>
+            Read Urls from file.
+            </summary>
+            <param name="path">Path to file/</param>
+            <returns>List of readed urls.</returns>
+        </member>
+        <member name="T:XmlTask.Parser">
+            <summary>
+            Parser class.
+            </summary>
+        </member>
+        <member name="M:XmlTask.Parser.GetUrls(System.String)">
+            <summary>
+            Get Urls from file.
+            </summary>
+            <param name="path">Path to file with Urls.</param>
+            <returns>List of <see cref="T:XmlTask.URL"/>.</returns>
+        </member>
+        <member name="T:XmlTask.Serializator">
+            <summary>
+            Serializer class.
+            </summary>
+        </member>
+        <member name="M:XmlTask.Serializator.SerializeUrl(System.String,System.String)">
+            <summary>
+            Serialize urls from input file to output file.
+            </summary>
+            <param name="input">File with urls.</param>
+            <param name="output">File for xml.</param>
+        </member>
+    </members>
+</doc>

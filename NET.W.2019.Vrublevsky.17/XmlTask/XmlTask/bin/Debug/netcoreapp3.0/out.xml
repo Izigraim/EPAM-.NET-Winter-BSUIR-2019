@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Addresses>
+  <Address>
+    <Host Name="github.com" />
+    <Uri>
+      <Segment>AnzhelikaKravchuk</Segment>
+    </Uri>
+    <Parameters>
+      <Parameter Value="repositories" Key="tab" />
+    </Parameters>
+  </Address>
+  <Address>
+    <Host Name="github.com" />
+    <Uri>
+      <Segment>AnzhelikaKravchuk</Segment>
+      <Segment>2017-2018.MMF.BSU</Segment>
+    </Uri>
+  </Address>
+  <Address>
+    <Host Name="habrahabr.ru" />
+    <Uri>
+      <Segment>company</Segment>
+      <Segment>it-grad</Segment>
+      <Segment>blog</Segment>
+      <Segment>341486</Segment>
+    </Uri>
+  </Address>
+</Addresses>

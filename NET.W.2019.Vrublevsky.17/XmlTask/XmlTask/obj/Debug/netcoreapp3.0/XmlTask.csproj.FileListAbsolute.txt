@@ -1,0 +1,12 @@
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\bin\Debug\netcoreapp3.0\XmlTask.exe
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\obj\Debug\netcoreapp3.0\XmlTask.csprojAssemblyReference.cache
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\obj\Debug\netcoreapp3.0\XmlTask.AssemblyInfoInputs.cache
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\obj\Debug\netcoreapp3.0\XmlTask.AssemblyInfo.cs
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\bin\Debug\netcoreapp3.0\XmlTask.deps.json
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\bin\Debug\netcoreapp3.0\XmlTask.runtimeconfig.json
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\bin\Debug\netcoreapp3.0\XmlTask.runtimeconfig.dev.json
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\bin\Debug\netcoreapp3.0\XmlTask.dll
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\bin\Debug\netcoreapp3.0\XmlTask.pdb
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\bin\Debug\netcoreapp3.0\XmlTask.xml
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\obj\Debug\netcoreapp3.0\XmlTask.dll
+D:\labs 5 sem\EPAM\NET.W.2019.Vrublevsky.17\XmlTask\XmlTask\obj\Debug\netcoreapp3.0\XmlTask.pdb
